@@ -7,11 +7,9 @@ module.exports = {
   ],
   theme: {
     extend: {
-      gridTemplateColumns: {
-        sidebar: "300px auto", // 👈 for sidebar layout. adds grid-cols-sidebar class
-      }, 
-      gridTemplateRows: {
-        header: "64px auto", // 👈 for the navbar layout. adds grid-rows-header class
+      colors: {
+        purple: "#80080",
+        light: "#952A95",
       },
     },
   },

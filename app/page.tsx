@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import HomePage from '../pages/HomePage';
 
 export default function Home() {
   return (
-    <div>
-      hellow world
-   </div>
+    <section className="">
+      <HomePage />
+    </section>
   )
 }
