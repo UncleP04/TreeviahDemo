@@ -56,7 +56,7 @@ const FooterList: FooterMenu[] = [
               <ListFooter>
                 {FooterList.map((footer) => (
                     <li key={footer.id}>
-                        <span className="text-purple-900 text-[20px]">{footer.icon}</span>
+                        <span className="text-primary text-[20px]">{footer.icon}</span>
                     </li>
                 ))}
                 </ListFooter>

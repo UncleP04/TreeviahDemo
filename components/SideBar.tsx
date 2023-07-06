@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { MdHome, MdLibraryBooks, MdEqualizer, MdExitToApp, MdAccountCircle, MdLiveHelp } from 'react-icons/md'
 import Image from 'next/image';
 import Logo from '../public/Images/logo.png'
+import '../styles/dashboard.css'
 
 interface SideMenu {
   id: number;
@@ -47,7 +48,7 @@ const SideList: SideMenu[] = [
 
   return (
     <div className="relative w-[100%] hidden md:block">
-      <section className={`bg-purple h-screen duration-300
+      <section className={`background h-screen duration-300
       ${hovered ? "w-72 rounded-tr-xl rounded-br-xl" : "w-[50px]"} p-3 pt-[25px] absolute top-0 left-0`}
       onMouseEnter={handleHover}
       onMouseLeave={handleMouseLeave}>
@@ -65,7 +66,7 @@ const SideList: SideMenu[] = [
               {SideList.map((list) => (
                 <li key={list.id} className=" flex justify-start align-middle">
                     <span className="py-2 text-[25px] text-white">{list.icon}</span>
-                  <h1 className={`px-4 py-2 rounded hover:bg-white text-white hover:text-purple w-[80%] ${hovered ? "scale-100 ml-[5px] cursor-pointer" : "scale-0"} duration-100`}>
+                  <h1 className={`px-4 py-2 rounded hover:bg-white color-purple w-[80%] ${hovered ? "scale-100 ml-[5px] cursor-pointer" : "scale-0"} duration-100`}>
                     {list.title}
                   </h1>
                 </li>
@@ -76,7 +77,7 @@ const SideList: SideMenu[] = [
                 <span className="py-2 text-[25px] text-white">
                 <MdExitToApp />
                 </span>
-                <h3 className={`px-4 py-2 rounded hover:bg-white text-white hover:text-purple w-[80%] ${hovered ? "scale-100 ml-[5px] cursor-pointer" : "scale-0"} duration-100`}>
+                <h3 className={`px-4 py-2 rounded hover:bg-white color-purple w-[80%] ${hovered ? "scale-100 ml-[5px] cursor-pointer" : "scale-0"} duration-100`}>
                   Logout
                 </h3>
               </span>

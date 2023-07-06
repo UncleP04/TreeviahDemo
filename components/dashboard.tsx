@@ -3,24 +3,26 @@ import Image from 'next/image';
 import ImageOne from '../public/Images/one.jpg';
 import ImageTwo from '../public/Images/two.jpg';
 import ImageThree from '../public/Images/three.jpg';
-
+import Awards from './awards'
+import Friends from './friends'
+import Profile from './profile'
 
 const Dashboard: React.FC = () => {
 
 
   return (
    <div>
-        <div className="w-[100%] h-[100%] flex lg:flex-row wrap flex-col">
-            <section className="w-[100%] p-[20px] lg:w-[60%]">
+        <div className="w-[100%] h-[90vh] flex lg:flex-row wrap flex-col overflow-y-auto pb-[2%] pl-0 md:pl-[50px] lg:pl-[50px] xl:pl-[10px]">
+            <section className="w-[100%] py-2 px-[20px] lg:w-[60%] flex flex-col justify-between align-middle">
                     <div className="flex flex-col justify-start align-middle">
                         <span className="flex flex-col justify-start align-middle">
                             <h2 className="capitalized font-medium text-[1.4em]">Welcome Senior Developer</h2>
-                            <small className="text-purple-400">@Snr_Developer</small>
+                            <small className="text-secondary">@Snr_Developer</small>
                         </span>
-                        <span className="rounded-md bg-purple-900 w-[100%] lg:w-[90%] p-[20px] mt-6"> 
+                        <span className="rounded-md bg-primary w-[100%] lg:w-[90%] mt-6 p-2"> 
                             <span className="flex flex-col justify-start align-middle">
                                 <h3 className="text-white text-[1em]">Host a Treeviah Game</h3>
-                                <small className="text-white">Get to host a game a play online.</small>
+                                <small className="text-white">Get to host a game a lay online.</small>
                             </span>
                             <span className="grid grid-cols-3 gap-4 justify-evenly align-middle mt-6">
                                  <label className="flex flex-col justify-center align-middle gap-[10px]">
@@ -68,11 +70,17 @@ const Dashboard: React.FC = () => {
                             </span>
                         </span>
                     </div>
-                    <div></div>
-                    <div></div>
+                    <div>
+                        <Awards />
+                    </div>
+                    <div className="mb-[20px]">
+                        <Friends />
+                    </div>
             </section>
-            <section className="lg:w-[40%] p-[20px] w-[100%]">
-                hello
+            <section className="lg:w-[40%] p-[20px] w-[100%] flex flex-col justify-between align-middle">
+                <div>
+                    <Profile />
+                </div>
             </section>
         </div>
    </div>
